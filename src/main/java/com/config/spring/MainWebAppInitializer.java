@@ -1,4 +1,4 @@
-package com.config;
+package com.config.spring;
 
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -24,7 +24,12 @@ public class MainWebAppInitializer implements WebApplicationInitializer {
           sc.addServlet("/", new DispatcherServlet(new GenericWebApplicationContext()));
         appServlet.setLoadOnStartup(1);
         appServlet.addMapping("/");
-
+        appServlet.addMapping("/logout");
+        appServlet.addMapping("/user");
+        appServlet.addMapping("/admin/add");
+        appServlet.addMapping("/admin/remove");
+        appServlet.addMapping("/admin/update");
+        appServlet.addMapping("/admin/show");
 
 
     }

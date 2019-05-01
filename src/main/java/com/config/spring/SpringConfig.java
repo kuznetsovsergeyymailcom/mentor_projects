@@ -1,7 +1,8 @@
-package com.config;
+package com.config.spring;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.controller"})
+@ComponentScans(value = {@ComponentScan("com.dao"),@ComponentScan("com.service"),@ComponentScan("com.controller")})
 public class SpringConfig implements WebMvcConfigurer {
 
     @Bean
