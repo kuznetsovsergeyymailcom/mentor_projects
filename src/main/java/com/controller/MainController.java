@@ -113,6 +113,11 @@ public class MainController {
         return "redirect:/";
     }
 
+    @GetMapping("/error")
+    public String error(){
+        return "error";
+    }
+
     @RequestMapping(value = "/user", method = {RequestMethod.GET, RequestMethod.POST})
     public String user() {
         return "user";
